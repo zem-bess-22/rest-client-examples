@@ -5,7 +5,6 @@ import feign.Feign;
 import feign.RequestLine;
 import feign.jackson.JacksonDecoder;
 import lombok.Data;
-import org.springframework.cloud.openfeign.FeignClient;
 
 import java.util.List;
 
@@ -21,7 +20,7 @@ public class OpenFeignClient {
   }
 
   public interface BooksClient {
-    @RequestLine("GET /books1")
+    @RequestLine("GET /books")
     List<BookDto> getBooks();
   }
 
